@@ -3,7 +3,7 @@ import json
 
 def write_block():
     data = {
-        'name': 'ivan',
+        'name': 'alex ti',
         'amount': 5,
         'to_whom': 'vasja',
         'hash': '123'
