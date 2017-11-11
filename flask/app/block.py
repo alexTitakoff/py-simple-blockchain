@@ -3,10 +3,7 @@ import json
 import os
 import hashlib
 
-blockchain_dir = os.curdir + '/blockchain/'
-print('----------------')
-print(os.curdir)
-print(blockchain_dir)
+blockchain_dir = os.curdir + '/app/blockchain/'
 
 def get_hash(filename):
     file = open(blockchain_dir + filename, 'rb').read()
@@ -60,7 +57,7 @@ def write_block(name, amount, to_whom, prev_hash=''):
 
 
 def main():
-    #write_block('alex titakob', 4, 'kate')
+    write_block('alex titakob', 4, 'kate')
     check_integrity()
 
 
