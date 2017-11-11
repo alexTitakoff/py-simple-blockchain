@@ -3,6 +3,7 @@ import json
 import os
 import hashlib
 
+
 blockchain_dir = os.curdir + '/app/blockchain/'
 
 def get_hash(filename):
