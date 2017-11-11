@@ -19,7 +19,7 @@ def index():
         amount = request.form['amount']
         reciever = request.form['reciever']
 
-        write_block(sender,amount,reciever)
+        write_block(sender, amount, reciever)
 
     return render_template('index.html')
 

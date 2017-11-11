@@ -3,6 +3,10 @@ import json
 import os
 import hashlib
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 
 blockchain_dir = os.curdir + '/app/blockchain/'
 
@@ -52,6 +56,8 @@ def write_block(name, amount, to_whom, prev_hash=''):
         'to_whom': to_whom,
         'hash': prev_hash
     }
+
+
 
     with open(blockchain_dir + filename, 'w') as file:
         json.dump(data, file, indent=4, ensure_ascii=False)
