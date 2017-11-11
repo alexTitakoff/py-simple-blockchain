@@ -4,7 +4,9 @@ import os
 import hashlib
 
 blockchain_dir = os.curdir + '/blockchain/'
-
+print('----------------')
+print(os.curdir)
+print(blockchain_dir)
 
 def get_hash(filename):
     file = open(blockchain_dir + filename, 'rb').read()

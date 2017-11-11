@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="{{ url_for('index') }}" method="POST">
+     <div class="form-group">
+        <label for="sender">Отправитель</label>
+        <input type="text" class="form-control" id="sender" name="sender" value="{{request.form.get('sender', '')}}">
+    </div>
+
+    <div class="form-group">
+        <label for="amount">Количество</label>
+        <input type="text" class="form-control" id="amount" name="amount" value="{{request.form.get('amount', '')}}">
+    </div>
+
+    <div class="form-group">
+        <label for="reciever">Получатель</label>
+        <input type="text" class="form-control" id="reciever" name="reciever" value="{{request.form.get('reciever', '')}}">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Отправить</button>
+</form>
+
+{% endblock %}
