@@ -29,22 +29,7 @@ def index():
 
 @app.route('/checking', methods=['GET'])
 def check():
-    print 'lala'
-    # result_arr = check_integrity()
-    result_arr = [
-      {
-        "block": 1,
-        "result": "ok"
-      },
-      {
-        "block": 2,
-        "result": "ok"
-      },
-      {
-        "block": 2,
-        "result": "ok"
-      }
-    ]
+    result_arr = check_integrity()
     return render_template('index.html', result_arr=result_arr)
 
 

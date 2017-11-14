@@ -25,13 +25,13 @@ def check_integrity():
     # вычислить хэш
     # сравнить полученные данные
     files = get_files()
-
     result = []
 
     for file in files[1:]:
         f = open(blockchain_dir + str(file))
         h = json.load(f)['hash']
         prev_file = str(file - 1)
+        actual_file = str(file)
         actual_hash = get_hash(prev_file)
 
         if h == actual_hash:
@@ -39,10 +39,8 @@ def check_integrity():
         else:
             res = 'Corrupted'
 
-        print('block {} is {}'.format(prev_file, res))
-
-        result.append({'block': prev_file,'result': res})
-
+        # print('block {} is {}'.format(prev_file, res))
+        result.append({'block': actual_file,'result': res, 'hash': actual_hash})
     return result
 
 
