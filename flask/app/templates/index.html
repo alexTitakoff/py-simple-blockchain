@@ -22,3 +22,13 @@
 </form>
 
 {% endblock %}
+
+{% block checking %}
+
+    {% for result in result_arr %}
+        <div class="result">
+            block {{ result['block'] }} : {{ result['result'] }}
+        </div>
+    {% endfor %}
+
+{% endblock %}

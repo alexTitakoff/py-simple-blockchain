@@ -20,5 +20,24 @@
     </div>
 </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col-6 mx-auto mt-5">
+            <form action="{{ url_for('check') }}" method="GET">
+                <hr>
+                <h4>Chek blockchain</h4>
+                <button type="submit"  class="btn btn-success" >Chek Integrity</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-6 mx-auto mt-5">
+                {% block checking %}
+
+                {% endblock %}
+            </div>
+        </div>
+</div>
+
 </body>
 </html>
